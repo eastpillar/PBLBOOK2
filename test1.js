@@ -1,4 +1,4 @@
-const totalPages = 29;
+const totalPages = 30;
 let currentPage = 1;
 let flipping = false;
 
@@ -28,11 +28,11 @@ async function loadText(pageNumber) {
             return await response.text();
         } else {
             console.error(`Failed to load text for page ${pageNumber}: ${response.statusText}`);
-            return 'Failed to load text';
+            return '';
         }
     } catch (error) {
         console.error(`Error loading text for page ${pageNumber}:`, error);
-        return 'Error loading text';
+        return '';
     }
 }
 
